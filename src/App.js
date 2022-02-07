@@ -1,10 +1,15 @@
 
 import './App.css';
+import {useEffect} from "react";
+import User from "./components/user";
+
 
 function App() {
   return (
       <div>
-        <h1>less 1</h1>
+          {
+              <User/>
+          }
       </div>
   );
 }
