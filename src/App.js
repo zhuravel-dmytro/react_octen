@@ -14,8 +14,6 @@ function App() {
               <div className='block p'>{<Posts/>} </div>
               <div className='block'>{<Comment/>} </div>
 
-
-
           </div>
 
 
