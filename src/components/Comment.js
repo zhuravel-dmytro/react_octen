@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 const Comment = () => {
 
-    let [comment, setComment] = useState([])
+    const [comment, setComment] = useState([])
 
     useEffect( () => {
         fetch('https://jsonplaceholder.typicode.com/comments')

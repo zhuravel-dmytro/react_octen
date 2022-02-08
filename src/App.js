@@ -1,6 +1,8 @@
 
 import './App.css';
 import {useEffect} from "react";
+
+
 import User from "./components/User";
 import Posts from "./components/Posts";
 import Comment from "./components/Comment";
