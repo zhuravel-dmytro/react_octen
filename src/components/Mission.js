@@ -15,7 +15,11 @@ const Mission = () => {
 
     return (
         <div>
-            {mission.map(value => <div>{value.mission_name}</div>)}
+            {mission.map(value =>
+                <div key={value.flight_number}>
+                {value.launch_year} - {value.mission_name} - {value.launch_year}
+                </div>)
+            }
         </div>
     );
 };
