@@ -1,23 +1,22 @@
 import React, {useEffect, useState} from 'react';
 
 const Mission = () => {
-    const [mission, setMission] = useState([])
+    const [filterMision, setFilterMision] = useState([])
     useEffect( () => {
         fetch('https://api.spacexdata.com/v3/launches/')
             .then(value => value.json())
             .then(value => {
-               // let filter => (){
-               //      if (value.launch_year !== 2020)
-               // }
-                setMission(value);
+                let filterMision = value.filter(value => value.launch_year !== '2020');
+                setFilterMision(filterMision)
             })
     }, [])
 
     return (
         <div>
-            {mission.map(value =>
+            {filterMision.map(value =>
                 <div key={value.flight_number}>
-                {value.launch_year} - {value.mission_name} - {value.launch_year}
+                {value.launch_year} - {value.mission_name}
+                    <img src={value.links.mission_patch_small} alt="img"/>
                 </div>)
             }
         </div>
