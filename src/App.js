@@ -7,7 +7,7 @@ import Mission from "./components/Mission";
 function App() {
   return (
       <div>
-        <Mission/>
+        <div className='wrapp'><Mission/></div>
       </div>
   );
 }

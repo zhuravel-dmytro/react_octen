@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
+import './Mission.css'
+
 const Mission = () => {
     const [filterMision, setFilterMision] = useState([])
     useEffect( () => {
@@ -14,7 +16,7 @@ const Mission = () => {
     return (
         <div>
             {filterMision.map(value =>
-                <div key={value.flight_number}>
+                <div className= 'infoBlock' key={value.flight_number}>
                 {value.launch_year} - {value.mission_name}
                     <img src={value.links.mission_patch_small} alt="img"/>
                 </div>)
