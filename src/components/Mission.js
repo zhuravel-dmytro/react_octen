@@ -17,8 +17,8 @@ const Mission = () => {
         <div>
             {filterMision.map(value =>
                 <div className= 'infoBlock' key={value.flight_number}>
-                {value.launch_year} - {value.mission_name}
-                    <img src={value.links.mission_patch_small} alt="img"/>
+                {value.launch_year}  <h1>{value.mission_name}</h1>
+                    <img className='mission_patch' src={value.links.mission_patch_small} alt="img"/>
                 </div>)
             }
         </div>
