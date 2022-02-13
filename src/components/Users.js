@@ -1,26 +1,26 @@
 import React, {useEffect, useState} from 'react';
 
-import {urls} from "../configs/Urls";
+
 import {userService} from "../services/UserServices";
 
 const Users = () => {
-const [user,setUser] = useState([])
+const [users,setUsers] = useState([])
     useEffect( () => {
             userService.getAll()
             .then(value => {
-                setUser(value)
+                setUsers(value)
             })
         }, [])
 
 
-    let getDetails = (id)=>{
-        console.log(id)
+    let getUserId = (id)=>{
+        console.log(getAll)
     }
     return (
         <div>
             <h1>USERS</h1>
             {
-                user.map(value =>
+                users.map(value =>
                     <div key={value.id}>{value.id} {value.name}
                              <button className='btnGetDetails' onClick={()=>getDetails(value.id)}>Get Details</button>
                     </div>)
