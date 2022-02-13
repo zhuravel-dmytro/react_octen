@@ -1,13 +1,14 @@
 
 import './App.css';
 import {useEffect} from "react";
-import Mission from "./components/Mission";
+import Users from "./components/Users";
+
 
 
 function App() {
   return (
       <div>
-        <div className='wrapp'><Mission/></div>
+        <div><Users/></div>
       </div>
   );
 }
