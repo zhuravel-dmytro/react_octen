@@ -1,16 +1,21 @@
+import React from 'react';
 
-import './App.css';
-import {useEffect} from "react";
-import Users from "./components/Users";
+
+import Users from "./components/Users/Users";
+import Details from "./components/UserDetails/Details";
+import Posts from "./components/Posts/Posts";
 
 
 
 function App() {
-  return (
-      <div>
-        <div><Users/></div>
-      </div>
-  );
+    return (
+        <div>
+            <div>
+                <Users/>
+                <Details/>
+            </div>
+            <Posts/>
+        </div>
+    );
 }
-
 export default App;
