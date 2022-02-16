@@ -1,4 +1,5 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
+
 
 
 import Users from "./components/Users/Users";
@@ -8,13 +9,15 @@ import Posts from "./components/Posts/Posts";
 
 
 function App() {
-
-
+const [user,setUser] = useState(null);
+    const getUser = (user) => {
+        setUser(user)
+    }
     return (
         <div>
             <div>
-                <Users/>
-                <Details/>
+                <Users getUser={getUser}/>
+                <Details user={user}/>
             </div>
             <Posts/>
         </div>
