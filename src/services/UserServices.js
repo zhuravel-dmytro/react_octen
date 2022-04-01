@@ -1,4 +1,5 @@
 import {urls} from "../configs/Urls";
+import {axiosServices} from "./axiosServices";
 
 
 const getAll = ()=> {
@@ -7,5 +8,5 @@ const getAll = ()=> {
 }
 
 export const userService = {
-    getAll
+    getAll:()=>axiosServices.get(urls.users).then(value => value.data)
 }
