@@ -6,15 +6,8 @@ import User from "../User/User";
 import {userService} from "../../services/UserServices";
 
 
-const Users = ({ getUser}) => {
-    const [users, setUsers] = useState([])
-    useEffect(()=>{
-        fetch('https://jsonplaceholder.typicode.com/users')
-            .then(value => value.json())
-            .then(value => {
-               setUsers(value)
-            })
-    }, [])
+const Users = ({ getUser,users}) => {
+
     return (
         <div>
             <div>
