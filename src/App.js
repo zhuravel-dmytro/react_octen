@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 
-import UserServices from 'services/UserServices';
+
 import Form from './components/Form/Form';
 import Users from './components/Users/Users';
-
+import {userService} from "./services/UserServices";
 const App = () => {
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
 
     useEffect(()=>{
-        UserServices.getAll().then(value =>{
+        userService.getAll().then(value =>{
             setUsers([...value])
             setFilteredUsers([...value])
         })
@@ -31,8 +31,8 @@ const App = () => {
 
     return (
         <div>
-            <Form getFilter={getFilter}/>
-            <Users users={setFilteredUsers}/>
+            <Form getFilter = {getFilter}/>
+            {/*<Users users = {setFilteredUsers}/>*/}
         </div>
     );
 };
