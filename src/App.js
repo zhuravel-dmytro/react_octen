@@ -8,7 +8,7 @@ const App = () => {
     const [users, setUsers] = useState([]);
     const [filteredUsers, setFilteredUsers] = useState([]);
 
-    useEffect(()=>{
+    useEffect(() => {
         userService.getAll().then(value =>{
             setUsers([...value])
             setFilteredUsers([...value])
@@ -18,13 +18,13 @@ const App = () => {
         let filterArr = [...users]
 
         if (data.name){
-            filterArr = filterArr.filter(user=>user.name.toLowerCase().includes(data.name.toLowerCase()))
+            filterArr = filterArr.filter(user => user.name.toLowerCase().includes(data.name.toLowerCase()))
         }
         if (data.username){
-            filterArr = filterArr.filter(user=>user.username.toLowerCase().includes(data.username.toLowerCase()))
+            filterArr = filterArr.filter(user => user.username.toLowerCase().includes(data.username.toLowerCase()))
         }
         if (data.email){
-            filterArr = filterArr.filter(user=>user.email.toLowerCase().includes(data.email.toLowerCase()))
+            filterArr = filterArr.filter(user => user.email.toLowerCase().includes(data.email.toLowerCase()))
         }
         setFilteredUsers(filterArr)
     }
@@ -32,7 +32,7 @@ const App = () => {
     return (
         <div>
             <Form getFilter = {getFilter}/>
-            {/*<Users users = {setFilteredUsers}/>*/}
+            <Users users = {filteredUsers}/>
         </div>
     );
 };
