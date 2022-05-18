@@ -13,7 +13,7 @@ const App = () => {
             setUsers([...value])
             setFilteredUsers([...value])
         })
-    })
+    },[])
     const getFilter = (data) =>{
         let filterArr = [...users]
 

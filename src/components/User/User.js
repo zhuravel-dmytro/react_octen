@@ -1,12 +1,12 @@
 import React from 'react';
 
 const User = ({user}) => {
-    const {id,name, userName, email} = user;
+    const {id,name, username, email} = user;
 
     return (
         <div>
            <div className='wrap'>
-               <div>{id})-- {name} -- {userName} -- {email} </div>
+               <div>{id})-- {name} -- {username} -- {email} </div>
            </div>
 
         </div>
