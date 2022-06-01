@@ -18,6 +18,7 @@ const UserDetailPage = () => {
                     <div>{user.name}</div>
                     <div>{user.username}</div>
                     <div>{user.email}</div>
+                    <button>детальніше</button>
                 </div>
             )}
         </div>
