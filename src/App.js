@@ -1,23 +1,21 @@
-import {Routes, Route, Link} from 'react-router-dom';
+import {Routes, Route } from 'react-router-dom';
 import React from 'react';
 
-import css from './App.css';
 import UsersPage from "./pages/UsersPage";
-import PostsPage from "./pages/PpostsPage";
+import PostsPage from "./pages/PostsPage";
 import ErrorPage from "./pages/ErrorPage";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
     return (
         <div>
-            <header className={'header'}>
-                <Link to="/">users</Link>
-                <Link to="/posts">posts</Link>
-            </header>
-
             <Routes>
-                <Route path={'/users'} element ={<UsersPage/>} />
-                <Route path={'/posts'} element ={<PostsPage/>} />
-                <Route path={'*'} element ={<ErrorPage/>} />
+                <Route path={'/'} element={<Layout/>}>
+                    <Route path={'users'} element ={<UsersPage/>} />
+                    <Route path={'posts'} element ={<PostsPage/>} />
+                    <Route path={'*'} element ={<ErrorPage/>} />
+                </Route>
+
             </Routes>
 
 
