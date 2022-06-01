@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom';
+import {Routes, Route, Link} from 'react-router-dom';
 import React from 'react';
 
 import css from './App.css';
@@ -10,8 +10,8 @@ const App = () => {
     return (
         <div>
             <header className={'header'}>
-                <a href="/">users</a>
-                <a href="/posts">posts</a>
+                <Link to="/">users</Link>
+                <Link to="/posts">posts</Link>
             </header>
 
             <Routes>
