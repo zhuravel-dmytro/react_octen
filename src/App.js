@@ -1,10 +1,11 @@
 import {Routes, Route } from 'react-router-dom';
 import React from 'react';
 
-import UsersPage from "./pages/UsersPage";
+import UsersPage from "./pages/usersPage/UsersPage";
 import PostsPage from "./pages/PostsPage";
 import ErrorPage from "./pages/ErrorPage";
 import Layout from "./components/layout/Layout";
+import UserDetailPage from "./pages/UserDetailPage";
 
 const App = () => {
     return (
@@ -12,7 +13,9 @@ const App = () => {
             <Routes>
                 <Route path={'/'} element={<Layout/>}>
                     <Route path={'users'} element ={<UsersPage/>} />
+                    <Route path={'users/:id'} element ={<UserDetailPage/>} />
                     <Route path={'posts'} element ={<PostsPage/>} />
+
                     <Route path={'*'} element ={<ErrorPage/>} />
                 </Route>
 
