@@ -10,11 +10,11 @@ const PostDetailPage = () => {
 
     useEffect(()=> {
         postService.getById(id).then(value => setPost({...value}))
-    },[])
+    },[id])
 
-   const getPost = (post) => {
-        setPost(post)
-    }
+   // const getPost = (post) => {
+   //      // setPost(post)
+   //  }
     return (
         <>
             <div>
@@ -23,12 +23,12 @@ const PostDetailPage = () => {
                         <div>{post.id}</div>
                         <div>{post.title}</div>
                         <div>{post.body}</div>
-                        <button onClick={()=>getPost(post)}>детальніше</button>
+                        {/*<button onClick={()=>getPost(post)}>детальніше</button>*/}
                     </div>
 
                 )}
             </div>
-             <InfoPost post={post}/>
+            {post && <InfoPost post={post}/>}
         </>
     );
 };
