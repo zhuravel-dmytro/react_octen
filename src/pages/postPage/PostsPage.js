@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
-import {postService} from "../services/postService";
-import Post from "../components/post/Post";
+import {postService} from "../../services/postService";
+import Post from "../../components/post/Post";
+import {Outlet} from "react-router-dom";
 
 const PostsPage = () => {
     const [posts, setPosts] = useState([]);
@@ -11,6 +12,9 @@ const PostsPage = () => {
     return (
         <div>
             {posts.map(post => <Post key={post.id} post={post}/>)}
+            <div>
+                <Outlet/>
+            </div>
         </div>
     );
 };
