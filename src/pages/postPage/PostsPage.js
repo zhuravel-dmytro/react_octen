@@ -13,8 +13,8 @@ const PostsPage = () => {
         postService.getAll().then(value => setPosts([...value]))
     },[])
     return (
-        <div className={'wrapp'}>
-           <div>{posts.map(post => <Post key={post.id} post={post}/>)}</div>
+        <div className={'wrappPost'}>
+           <div className={'postsBlock'}>{posts.map(post => <Post key={post.id} post={post}/>)}</div>
             <div>
                 <Outlet/>
             </div>

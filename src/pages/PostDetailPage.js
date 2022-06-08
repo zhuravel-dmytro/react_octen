@@ -28,7 +28,7 @@ const PostDetailPage = () => {
 
                 )}
             </div>
-            {/*{post && <InfoPost post={post}/>}*/}
+            {post && <InfoPost post={post}/>}
         </>
     );
 };
