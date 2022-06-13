@@ -6,6 +6,8 @@ import {userService} from "../../services/userService";
 import User from "../../components/user/User";
 
 import css from "./usersPage.css";
+import InfoPost from "../informationPage/InfoPost";
+import InfoUser from "../informationPage/InfoUser";
 
 
 const UsersPage = () => {
@@ -22,6 +24,9 @@ const UsersPage = () => {
             </div>
             <div>
                 <Outlet/>
+            </div>
+            <div>
+                <InfoUser/>
             </div>
         </div>
 

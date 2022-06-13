@@ -11,7 +11,7 @@ const UserDetailPage = () => {
    },[id])
 
     const getUser = (id)=>{
-      setUser(id)
+      userService.getById(id).then(value => setUser({...value}))
     }
     return (
         <div>
@@ -21,7 +21,7 @@ const UserDetailPage = () => {
                     <div>{user.name}</div>
                     <div>{user.username}</div>
                     <div>{user.email}</div>
-                    <button onClick={getUser}>детальніше</button>
+                    <button onClick={()=>getUser(id)}>детальніше</button>
                 </div>
             )}
         </div>
