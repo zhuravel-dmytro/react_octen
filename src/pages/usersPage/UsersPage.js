@@ -5,6 +5,8 @@ import {Outlet} from "react-router-dom";
 import {userService} from "../../services/userService";
 import User from "../../components/user/User";
 
+import css from "./usersPage.css";
+
 
 const UsersPage = () => {
     const [users,setUsers] = useState([]);
@@ -14,7 +16,7 @@ const UsersPage = () => {
     },[])
 
     return (
-        <div>
+        <div className={'wrappAll'}>
             <div className={'usersPage'}>
                 {users.map(user => <User key={user.id} user={user}/>)}
             </div>

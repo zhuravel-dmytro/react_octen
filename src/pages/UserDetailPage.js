@@ -8,8 +8,11 @@ const UserDetailPage = () => {
 
    useEffect(() => {
     userService.getById(id).then(value => setUser({...value}))
-   },[])
+   },[id])
 
+    const getUser = (id)=>{
+      setUser(id)
+    }
     return (
         <div>
             {user && (
@@ -18,7 +21,7 @@ const UserDetailPage = () => {
                     <div>{user.name}</div>
                     <div>{user.username}</div>
                     <div>{user.email}</div>
-                    <button>детальніше</button>
+                    <button onClick={getUser}>детальніше</button>
                 </div>
             )}
         </div>
